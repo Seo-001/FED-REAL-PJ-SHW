@@ -446,6 +446,7 @@ ul.headline li span {
     background-color: #f0edcc;
 }
 
+/* 질문 여기에서 height: 100% 가 height: 100vh; 이더네  */
 .bgcp ul {
     position: relative;
     display: flex;
