@@ -30,7 +30,7 @@ function loadFn() {
 
     function chgMenu() {
         // 모바일이 아니면 리턴!
-        if(!mob) return;
+        if (!mob) return;
         let tg = document.querySelector(".top");
         tg.classList.toggle("on");
         let isGnb = tg.classList.contains("on");
@@ -82,7 +82,6 @@ function loadFn() {
 
  */
 
-            
             // 대상 요소의 위치값은 nav.gnb 요소가
             // relative를 가진 요소를 기준한 offset 정보임!
             //확인
@@ -200,7 +199,7 @@ insertBefore()는 appendChild()와 비슷하지만, 전달인자가 두 개라�
     왜 맨 마지막 사진이 첫번째가 가는가? 
     */
 
-     for (let i = 0; i < 2; i++)  chgSeq();
+    for (let i = 0; i < 2; i++) chgSeq();
 
     // 참고
     // for문은 for문 안에서만 의미를 가진다.
@@ -617,7 +616,7 @@ insertBefore()는 appendChild()와 비슷하지만, 전달인자가 두 개라�
     // let bth3txt = bth3.innerText;
     // for (let x = 0; x < 3; x++) {
     //     bth3.innerText += bth3txt;
-    // }
+    // }433
 
     // 0.  위치를 불러오는 시간
     setTimeout(() => {
@@ -920,6 +919,5 @@ insertBefore()는 appendChild()와 비슷하지만, 전달인자가 두 개라�
         ss_pos = pos;
 
         console.log("부스", ss_pos);
-
     } ////////// mvPos ///////////////////
 } //////////////// loadFn 함수 ///////////////
