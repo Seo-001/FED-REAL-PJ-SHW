@@ -682,7 +682,7 @@ insertBefore()는 appendChild()와 비슷하지만, 전달인자가 두 개라�
         let xval = gps(x);
         // 구간적용 조건문
 
-        if (xval < hv || xval > 0) {
+        if (xval < hv && xval > 0) {
             // if (xval < hv && xval > 0) {
             x.classList.add("on");
         }
