@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PRINT BAKERY_2차개인프로젝트PJ</title>
+        <!-- 파비콘 넣기 -->
+        <link rel="shortcut icon" href="./img/favicon.png" type="image/png" />
+        <!--폰트어썸 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./css/media.css" />
+
+        <script src="./js/jquery-3.6.3.min.js"></script>
+        <script src="./js/jquery-ui.min.js"></script>
+
+        <!-- 뷰JS 스탠드얼론 버전 가져오기! -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+        <!-- 뷰JS vuex CDN -->
+        <script src="https://unpkg.com/vuex@3.0.0"></script>
+
+        <!-- 부드러운 스크롤 JS -->
+        <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+        <script src="./js/smoothScroll20.js"></script>
+
+        <script src="./js/main.js" type="module"></script>
+    </head>
+    <body>
+        <div id="top">
+            <!-- 부모 컴포넌트 요소 -->
+            <top-comp></top-comp>
+        </div>
+        <!-- 메인 영역 -->
+        <div id="cont">
+            <main-comp> </main-comp>
+        </div>
+
+        <div id="footer">
+            <foot-comp></foot-comp>
+        </div>
+    </body>
+</html>

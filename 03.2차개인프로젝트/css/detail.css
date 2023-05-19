@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* 외부CSS 파일 합치기  */
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./common.css);
+
+html,
+body {
+    width: 100%;
+    overflow: none;
+    /* margin: 0 auto; */
+}
+
+#detail {
+    max-width: 1600px;
+    margin: 100px auto;
+    width: 100%;
+    position: relative;
+}
+
+#bgbx a {
+    position: absolute;
+    right: 5%;
+}
+
+#detail a {
+    font-size: 3vw;
+}
+
+#detail article {
+    font-size: 5vw;
+    display: inline-block;
+    position: absolute;
+    top: 22%;
+}

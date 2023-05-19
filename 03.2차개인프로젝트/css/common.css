@@ -1,0 +1,238 @@
+@charset "utf-8";
+/* 상단, 하단 
+
+
+/********************************** 
+///////////////////////////////////
+
+        GNB 네비게이션 
+
+/////////////////////////////////////
+
+
+
+
+
+
+*************************************/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#footer {
+    width: 100vw;
+    /* height: 8vh; */
+    background-color: #222;
+    /* border-top: 1px solid #e4e4e4; */
+}
+
+footer {
+    /* z-index: 1; */
+    height: 100%;
+    max-width: 1600px;
+
+    font-size: 10px;
+    line-height: 1.6;
+    color: #e4e4e4;
+    text-align: center;
+    padding: 10px;
+}
+
+footer address {
+    width: 100%;
+    height: auto;
+}
+
+header {
+    padding-top: 1.85rem;
+    background-color: #fff;
+    height: 50px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 0.2px solid #222;
+    box-shadow: 1px 1px 1px #777;
+}
+
+header .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.pagenav {
+    /* max-width: 1600px; */
+    margin: 0 10vw;
+}
+
+header nav {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.tleft {
+    display: flex;
+    width: 600px;
+    align-items: center;
+    gap: 36px;
+}
+
+.tleft a {
+    display: inline-block;
+    height: 100%;
+}
+
+.mlist a {
+    color: #e4e4e4;
+}
+
+.navleft ul,
+.navright ul {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navleft ul a img,
+.tleft a img {
+    vertical-align: -4px;
+    height: 36px;
+}
+
+/* .navright ul {
+    /* justify-content: space-between; 
+} */
+
+.navright ul a {
+    display: inline-block;
+    height: 100%;
+}
+
+.navright ul li:last-child {
+    border-right: none;
+}
+
+.navright ul a img {
+    vertical-align: -4px;
+    height: 20px;
+}
+
+.ham {
+    position: relative;
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    /* right: 3%; */
+    width: 40px;
+    height: 25px;
+    /* outline: 1px solid red; */
+    cursor: pointer;
+    z-index: 99999;
+}
+
+.ham span {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 4px #777;
+    transition: all 0.4s ease-out;
+}
+
+.ham span:nth-child(1) {
+    top: 0;
+}
+.ham span:nth-child(2) {
+    top: 10px;
+    right: -50%;
+    /* 트랜지션 때문에 초기값필요!(기본값이 auto라서!) */
+}
+/* 오버시 2번막대 이동! */
+.ham:hover span:nth-child(2) {
+    right: 0;
+}
+
+/* 3번막대 */
+.ham span:nth-child(3) {
+    top: 20px;
+}
+
+/* .ham에 class="on"을 주면 span막대 변경하기 */
+
+/* 1번막대 : 중앙이동+시계방향45도회전 */
+.ham.on span:nth-child(1) {
+    top: 10px;
+    transform: rotate(45deg);
+    box-shadow: none;
+}
+
+/* 2번막대 : left위치 중앙이동+width는0 */
+.ham.on span:nth-child(2) {
+    width: 0;
+    left: 50%;
+}
+
+/* 3번막대 : 중앙이동+반시계방향45도회전 */
+.ham.on span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-45deg);
+    box-shadow: none;
+}
+
+.mbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none; /* 처음에 안보임 */
+}
+/* 가상요소로 반투명배경 */
+.mbox::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+}
+
+/* 메뉴중앙박스 */
+.mlist {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex; /* 플렉스박스 */
+    z-index: 1; /* 반투명배경보다 위 */
+}
+/* 메뉴별박스 */
+.mlist ol {
+    width: 300px;
+    color: #e2e2e2;
+}
+/* 상위메뉴 */
+.mlist li.top {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+/* 하위메뉴 */
+.mlist li.bt {
+    font-size: 2.1rem;
+    padding-bottom: 5px;
+}

@@ -1,0 +1,87 @@
+/********************* max-width: 1000px********************** */
+@media screen and (max-width: 1200px) {
+    #detail.on img {
+        height: 450px;
+    }
+
+    #detail.on .gimg {
+        position: static;
+    }
+
+    main img {
+        width: 180px;
+    }
+}
+
+/********************* max-width: 1000px********************** */
+@media screen and (max-width: 1000px) {
+    .mlist ol {
+        width: auto;
+    }
+
+    .mlist {
+        gap: 4vw;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1vw;
+        grid-row-gap: 3vw;
+    }
+    .lnb {
+        gap: 0;
+        justify-content: space-around;
+    }
+    #detail.on article {
+        gap: 0;
+        flex-direction: column;
+    }
+
+    #detail.on .explain h6 {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    #detail.on .explain div {
+        width: 100%;
+        font-size: 24px;
+    }
+}
+/********************* max-width: 1000px********************** */
+
+/********************* max-width: 700px********************** */
+@media screen and (max-width: 700px) {
+    .lnb li {
+        font-size: 2.4vw;
+    }
+    .navleft ul {
+        font-size: 14px;
+        gap: 1.6vw;
+    }
+
+    .tleft a img {
+        height: 5vw;
+    }
+    section.pagenav {
+        margin: 1vw 10vw;
+    }
+}
+
+/********************* max-width: 700px********************** */
+
+/********************* max-width: 500px********************** */
+@media screen and (max-width: 500px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #detail.on img {
+        width: 250px;
+    }
+    .lnb {
+        flex-direction: column;
+        gap: 6px;
+    }
+    .tleft {
+        gap: 6px;
+    }
+}
