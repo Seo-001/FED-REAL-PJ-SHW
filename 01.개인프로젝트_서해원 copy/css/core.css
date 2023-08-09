@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/* 웹폰트, 공용클래스 , 레이아웃*/
+
+@import url("https://fonts.googleapis.com/css2?family=Overlock&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Georama&display=swap");
+
+/* header -> font-family: 'Overlock', cursive; */
+/* main-> font-family: 'Georama', sans-serif; */
+/* footer ->  font-family: 'Nanum Gothic', sans-serif; */
+
+/* 전체 페이지 보이는 화면 기준  */
+/* 전체 레이아웃 */
+
+/* 3. 하단영역 레이아웃 */
+
+.info {
+    max-width: 1920px;
+    min-height: 100px;
+}
+
+footer.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: #222;
+    font-size: 1.3rem;
+    font-family: "Nanum Gothic", sans-serif;
+    color: #ffffffa9;
+}
+
+footer address {
+    font-style: normal;
+}
+
+/* 글자 숨김 클래스(IR배경이미지 설명 등  숨기기) */
+.ir {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
