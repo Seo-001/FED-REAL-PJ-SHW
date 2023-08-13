@@ -21,7 +21,12 @@
     ></script>
     <title>찾아오는길</title>
 
-    
+    <!-- /* 지도 */
+        https://devlifetestcase.tistory.com/43
+.map_wrap {
+position:absolute; overflow:hidden; width:100%;
+height:1024px;
+} -->
     <!-- https://jinibh.tistory.com/entry/%EB%84%A4%EC%9D%B4%EB%B2%84-%EC%A7%80%EB%8F%84-%EC%9C%84%EB%8F%84-%EA%B2%BD%EB%8F%84-%EC%B0%BE%EA%B8%B0
     경도 위도 찾는 방법  -->
     <script>
@@ -30,59 +35,16 @@
       function loadFn() {
         startSS();
         // 지도를 담을 영역의 DOM
-        let mapContainer = document.getElementById('map');
-
+        let container = document.getElementById('map');
         // 지도를 생성할 때 필요한 기본옵션
-        let mapOption = {
+        let options = {
           // 지도의 중심좌표
           //좌표 : 위도 : 37.536963440446186, 경도 : 126.99677458014837
           center: new kakao.maps.LatLng(37.536963440446186, 126.99677458014837),
           level: 3, // 지도의 레벨 (확대, 축소)
-          // marker: marker,
         };
         // 지도 생성 및 객체 리턴
-
-        let map = new kakao.maps.Map(mapContainer, mapOption);
-        let imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png';
-        // 마커이미지의 주소입니다
-        let imageSize = new kakao.maps.Size(64, 69);
-        // 마커이미지의 크기입니다
-        let imageOption = { offset: new kakao.maps.Point(27, 69) };
-        // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
-
-        // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-        let markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
-        let markerPosition = new kakao.maps.LatLng(37.536963440446186, 126.99677458014837);
-        // 마커가 표시될 위치입니다
-
-        // 이미지 지도에 표시할 마커
-        // 마커를 생성합니다
-        var marker = new kakao.maps.Marker({
-          position: markerPosition,
-          image: markerImage, // 마커이미지 설정
-        });
-
-        // 마커가 지도 위에 표시되도록 설정합니다
-        marker.setMap(map);
-
-        // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-        let content =
-          '<div class="customoverlay">' +
-          '  <a href="https://www.organica.kr/" target="_blank">' +
-          '    <span class="title">올가니카 본사</span>' +
-          '  </a>' +
-          '</div>';
-
-        // 커스텀 오버레이가 표시될 위치입니다
-        let position = new kakao.maps.LatLng(37.536963440446186, 126.99677458014837);
-
-        // 커스텀 오버레이를 생성합니다
-        let customOverlay = new kakao.maps.CustomOverlay({
-          map: map,
-          position: position,
-          content: content,
-          yAnchor: 1,
-        });
+        let map = new kakao.maps.Map(container, options);
       } ////loadFn()
     </script>
   </head>
