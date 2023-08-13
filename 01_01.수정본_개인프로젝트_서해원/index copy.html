@@ -19,36 +19,24 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      Kakao.init('96646345c31ad677ce1ae1ec1b3045b5');
-    </script>
-    <script>
-      function loginWithKakao() {
-        Kakao.Auth.authorize({
-          redirectUri: 'https://developers.kakao.com/tool/demo/oauth',
+      // 메인화면 카카오
+      window.Kakao.init('96646345c31ad677ce1ae1ec1b3045b5'); // 사용하려는 앱의 JavaScript 키 입력
 
-          //redirectUri: 'https://192.168.45.169:5500',
-        }); ////////
-      } /////////loginWithKakao()
-      if (token) {
-        Kakao.Auth.setAccessToken(token);
-        Kakao.Auth.getStatusInfo()
-          .then(function (res) {
-            if (res.status === 'connected') {
-              document.getElementById('token-result').innerText =
-                'login success, token: ' + Kakao.Auth.getAccessToken();
-            } ////////if
-          }) ///Kakao.Auth.getStatusInfo()/////////
-          .catch(function (err) {
-            Kakao.Auth.setAccessToken(null);
-          }); /////catch//
-      } /////////////if
-
-      function getCookies(name) {
-        var parts = document.cookie.split(name + '=');
-        if (parts.length === 2) {
-          return parts[1].split(';')[0];
-        }
-      } //////getCookies(name)/////////
+      function kakaoLogin() {
+        window.Kakao.Auth.login({
+          scope: 'profile,account_email,gender',
+          success: function (authObj) {
+            console.log(authObj);
+            window.Kakao.API.request({
+              url: '/v2/user/me',
+              success: (res) => {
+                const kakao_account = res.kakao_account;
+                console.log(kakao_account);
+              },
+            });
+          },
+        });
+      } ////////////
     </script>
     <!-- 부드러운 스크롤 JS -->
     <script src="./JS/smoothScroll20.js"></script>
@@ -96,10 +84,9 @@
                   </a>
                 </li>
                 <li>
-                  <a id="kakao-login-btn" href="javascript:loginWithKakao()">
+                  <a href="javascript:kakaoLogin();" target="_blank">
                     <span class="ir">로그인</span>
                     <img src="./img/kakao.png" alt="카카오 로그인 버튼 " />
-                    <p id="token-result"></p>
                   </a>
                 </li>
               </ol>
