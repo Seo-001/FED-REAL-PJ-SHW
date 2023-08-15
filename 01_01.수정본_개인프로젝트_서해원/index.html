@@ -24,7 +24,8 @@
     <script src="./JS/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="text/javascript">
-      Kakao.init('5bc11e136d9aff8a86918035d140a193');
+      window.Kakao.init('5bc11e136d9aff8a86918035d140a193');
+
       // SDK 초기화 여부를 판단합니다.
       //console.log(Kakao.isInitialized());
       //Kakao.isInitialized();
@@ -43,62 +44,16 @@
         Kakao.Auth.authorize({
           redirectUri: 'http://192.168.45.169:5500/01_01.수정본_개인프로젝트_서해원/login.html',
           prompt: 'login',
+          scope: 'profile_nickname',
         });
+        kakaoLogin();
         // location.href =
         //   'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=	5bc11e136d9aff8a86918035d140a193&redirect_uri=http://192.168.45.169:5500/01_01.수정본_개인프로젝트_서해원/login.html';
       }
 
-      ///////////////////////////////////
+    
 
-      // const code = location.search.split('?code=')[1];
-      // if (code !== undefined) {
-      //   requestToken(code)
-      //     .then(({ data }) => {
-      //       console.log('requestToken:', data);
-      //     })
-      //     .catch((err) => {
-      //       console.error('requestToken:', err);
-      //     });
-      // }
-
-      // function requestToken(code) {
-      //   const JS_APP_KEY = '19bcc8fcc00e53adf1ca26aff57d53f8';
-      //   const REDIRECT_URI = 'http://192.168.45.169:5500/01_01.수정본_개인프로젝트_서해원/login.html';
-      //   const makeFormData = (params) => {
-      //     const searchParams = new URLSearchParams();
-      //     Object.keys(params).forEach((key) => {
-      //       searchParams.append(key, params[key]);
-      //     });
-
-      //     return searchParams;
-      //   }; //////////////
-
-      //   return axios({
-      //     method: 'POST',
-      //     headers: {
-      //       'content-type': 'application/x-www-form-urlencoded;charset=utf-8',
-      //     },
-      //     url: 'https://kauth.kakao.com/oauth/token',
-      //     data: makeFormData({
-      //       grant_type: 'authorization_code',
-      //       client_id: JS_APP_KEY,
-      //       redirect_uri: REDIRECT_URI,
-      //       code,
-      //     }), ///////////
-      //   }); //////axios///////
-      // } ///requesttoken/////////
-
-      // function requestUserInfo() {
-      //   Kakao.API.request({
-      //     url: '/v2/user/me',
-      //   })
-      //     .then(function (res) {
-      //       alert(JSON.stringify(res));
-      //     })
-      //     .catch(function (err) {
-      //       alert('failed to request user information: ' + JSON.stringify(err));
-      //     });
-      // } ///requestUserInfo////////////
+    
     </script>
   </head>
   <body>
