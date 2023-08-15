@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="./JS/jquery-3.6.3.min.js"></script>
+    <script src="./JS/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="./JS/smoothScroll20.js"></script>
+    <script src="./JS/main.js"></script>
+    <script>
+      Kakao.init('5bc11e136d9aff8a86918035d140a193');
+    </script>
+    <script>
+      $(document).ready(function () {
+        const codeTest = location.search.split('?code=')[1];
+
+        if (codeTest != null && codeTest != undefined) {
+          $.ajax({
+            type: 'POST',
+            url: 'https://kauth.kakao.com/oauth/token',
+            header: {
+              'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+            },
+            data: {
+              grant_type: 'authorization_code',
+              client_id: '19bcc8fcc00e53adf1ca26aff57d53f8',
+              redirect_uri: 'https://192.168.45.169:5500/login.html',
+              code: codeTest,
+            },
+            success: function (data, textStatus) {
+              console.log(data);
+              console.log(data.access_token);
+              alert('토큰 -> ' + data.access_token);
+            },
+            error: function (request, status, error) {
+              alert('code:' + request.status + '\r\n' + 'message:' + request.responseText + '\r\n' + 'error:' + error);
+            },
+          });
+        }
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
