@@ -8,8 +8,10 @@
       "type": "chrome",
       "request": "launch",
       "name": "Open index.html",
-      // "file": "c:\\Users\\user\\Desktop\\프론트엔드\\FED-REAL-PJ-SHW\\01_01.수정본_개인프로젝트_서해원\\index.html"
-      "file": "${workspaceFolder}/index.html"
+      "file": "c:\\Users\\user\\Desktop\\프론트엔드\\FED-REAL-PJ-SHW\\01_01.수정본_개인프로젝트_서해원\\index.html",
+      "url": "http://localhost:8080"
+
+      //"file": "${workspaceFolder}"
     }
   ]
 }

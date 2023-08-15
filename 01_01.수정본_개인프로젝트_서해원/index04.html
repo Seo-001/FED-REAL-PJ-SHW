@@ -26,8 +26,7 @@
     <script type="text/javascript">
       Kakao.init('5bc11e136d9aff8a86918035d140a193');
       // SDK 초기화 여부를 판단합니다.
-      //console.log(Kakao.isInitialized());
-      //Kakao.isInitialized();
+      console.log(Kakao.isInitialized());
 
       //   redirectUri: 'https://192.168.45.169:5500/oauth',
       // https://kindloveit.tistory.com/107
@@ -42,12 +41,37 @@
       function loginWithKakao() {
         Kakao.Auth.authorize({
           redirectUri: 'http://192.168.45.169:5500/01_01.수정본_개인프로젝트_서해원/login.html',
-          prompt: 'login',
         });
         // location.href =
         //   'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=	5bc11e136d9aff8a86918035d140a193&redirect_uri=http://192.168.45.169:5500/01_01.수정본_개인프로젝트_서해원/login.html';
       }
 
+      // 아래는 데모를 위한 UI 코드입니다.
+      displayToken();
+      function displayToken() {
+        var token = getCookie('authorize-access-token');
+
+        if (token) {
+          Kakao.Auth.setAccessToken(token);
+          Kakao.Auth.getStatusInfo()
+            .then(function (res) {
+              if (res.status === 'connected') {
+                document.getElementById('token-result').innerText =
+                  'login success, token: ' + Kakao.Auth.getAccessToken();
+              }
+            })
+            .catch(function (err) {
+              Kakao.Auth.setAccessToken(null);
+            });
+        }
+      }
+
+      function getCookie(name) {
+        var parts = document.cookie.split(name + '=');
+        if (parts.length === 2) {
+          return parts[1].split(';')[0];
+        }
+      }
       ///////////////////////////////////
 
       // const code = location.search.split('?code=')[1];
@@ -146,11 +170,11 @@
                   <a id="kakao-login-btn" href="javascript:loginWithKakao()">
                     <span class="ir">로그인</span>
                     <img src="./img/kakao.png" alt="카카오 로그인 버튼 " />
-                    <!-- <p id="token-result"></p>
+                    <p id="token-result"></p>
                     <button class="api-btn" onclick="loginWithKakao()" style="visibility: hidden">
-                       //  href="'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=	5bc11e136d9aff8a86918035d140a193&redirect_uri=http://192.168.45.169:5500/login.html'"  
+                      <!-- //  href="'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=	5bc11e136d9aff8a86918035d140a193&redirect_uri=http://192.168.45.169:5500/login.html'"  -->
                       사용자 정보 가져오기
-                    </button> -->
+                    </button>
                   </a>
                 </li>
               </ol>
