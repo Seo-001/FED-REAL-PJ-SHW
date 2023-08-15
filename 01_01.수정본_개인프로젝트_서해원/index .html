@@ -19,30 +19,41 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      Kakao.init('96646345c31ad677ce1ae1ec1b3045b5');
-    </script>
-    <script>
+      Kakao.init('5bc11e136d9aff8a86918035d140a193');
+      // SDK 초기화 여부를 판단합니다.
+      console.log(Kakao.isInitialized());
+
+      //   redirectUri: 'https://192.168.45.169:5500/oauth',
       // https://kindloveit.tistory.com/107
       //https://triplexblog.kr/55
-      // 카카오 로그인
+      // https://kakao-tam.tistory.com/59
+    </script>
+
+    <script>
       function loginWithKakao() {
         Kakao.Auth.authorize({
           redirectUri: 'https://192.168.45.169:5500/oauth',
-        }); ////////
-      } /////////loginWithKakao()
-      //카카오로그인
-      if (token) {
-        Kakao.Auth.setAccessToken(token);
-        Kakao.Auth.getStatusInfo()
-          .then(function (res) {
-            if (res.status === 'connected') {
-              document.getElementById('token-result').innerText =
-                'login success, token: ' + Kakao.Auth.getAccessToken();
-            }
-          })
-          .catch(function (err) {
-            Kakao.Auth.setAccessToken(null);
-          });
+        });
+      }
+
+      // 아래는 데모를 위한 UI 코드입니다.
+      displayToken();
+      function displayToken() {
+        var token = getCookie('authorize-access-token');
+
+        if (token) {
+          Kakao.Auth.setAccessToken(token);
+          Kakao.Auth.getStatusInfo()
+            .then(function (res) {
+              if (res.status === 'connected') {
+                document.getElementById('token-result').innerText =
+                  'login success, token: ' + Kakao.Auth.getAccessToken();
+              }
+            })
+            .catch(function (err) {
+              Kakao.Auth.setAccessToken(null);
+            });
+        }
       }
 
       function getCookie(name) {
