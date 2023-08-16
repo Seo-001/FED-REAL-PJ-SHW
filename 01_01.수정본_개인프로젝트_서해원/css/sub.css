@@ -17,7 +17,7 @@
   height: calc(100vh - 157px);
 }
 
-.mapwrap, {
+.mapwrap {
   position: relative;
   /* margin-top: 204px; */
 }
