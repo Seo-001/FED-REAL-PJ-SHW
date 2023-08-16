@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/media.css" />
     <link rel="shortcut icon" href="#">
@@ -19,38 +20,79 @@
     integrity="sha38470k0rrouSYPWJt7q9rSTKpiTfX6USlMYjZUtr1Du+9o4cGvhPAWxngdtVZDdErlh"
     crossorigin="anonymous"
   ></script> -->
-  <!-- <script src="./JS/main.js"></script> -->
+  <script src="./JS/main.js"></script>
 
     <title>검색</title>
 
     <!--
         [kakao Daum검색] kakao API 사용해서 Daum이미지 가져오기 
         https://rhkdgus0779.tistory.com/70
+        https://blog.naver.com/moyngx2/222999673257
+        https://velog.io/@phj9908/WEB-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EA%B2%80%EC%83%89-API-%ED%99%9C%EC%9A%A9jQueryAjax
+        https://velog.io/@heelieben/403-Error-img-%ED%83%9C%EA%B7%B8-%EC%99%B8%EB%B6%80-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%9A%94%EC%B2%AD-forbidden-%EB%90%98%EB%8A%94-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95
 -->
-    <script>
-      window.addEventListener('load', loadFn);
+  
 
-     // imgFn()
-      function loadFn() {
+<script>
+         
+    //   window.addEventListener('load', loadFn);
+
+
+    // 메뉴 클릭시 이동하기
+    // 대상: .mvbx a
+    // const mvgnb = document.querySelectorAll(".gnb a");
+    // // console.log(mvgnb);
+
+    // mvgnb.forEach((ele) => ele.addEventListener("click", mvPos));
+
+    // function mvPos(e) {
+    //     // 기본이동막기
+    //     e.preventDefault();
+    //     // a의 href속성 읽기
+    //     let ahref = this.getAttribute("href");
+    //     console.log(ahref);
+
+    //     // 위치값 셋팅
+    //     let pos = document.querySelector(ahref).offsetTop;
+    //     console.log(pos);
+
+    //     // 제이쿼리로 위치이동하기
+    //     $("html,body")
+    //         .stop()
+    //         .animate(
+    //             {
+    //                 scrollTop: pos + "px",
+    //             },
+    //             800,
+    //             "easeInOutQuint"
+    //         );
+
+    //     // 위치이동 : 부드러운 스크롤이므로 위치변수만 업데이트
+    //     ss_pos = pos;
+
+    //     console.log("부스", ss_pos);
+    // } ////////// mvPos ///////////////////
+
+      imgFn()
+      function imgFn() {
         startSS();
 
 
         $.ajax({
-            type:"GET",
+            method:"GET",
             url:"https://dapi.kakao.com/v2/search/image",
-            headers:{Authorization:"KakaoAK d735c7568924d2a1871d3a56e2399f3f"},
+            headers:{
+                Authorization:"KakaoAK d735c7568924d2a1871d3a56e2399f3f"},
             data :{
-                'query':'올가니카클렌징쥬스',
+                'query':'올가니카클렌징주스',
                 'sort':'accuracy',
-                'page':1,
-                'size':8,
-                'width':100,
-                'height':100
+                'size':10,
             },////data//////
             success:function(data){
                 console.log(data);
                  $.each(data.documents, function (index) {
-                    $("ul#search").append('<div><img src="'+this.image_url+'"/></div>');
+                 //   let realimg=data.documents.image_url.split('?code=')[0]
+                    $("ul#search").append('<li><img src="'+this.image_url+'"/></li>');
 
                 })////////////////
             },//success/////
@@ -65,8 +107,9 @@
        
 
 
-      } ////loadFn()
+      } ////바깥 함수 
     </script>
+
   </head>
 
   <body>
@@ -139,24 +182,18 @@
       </div>
 
       <div class="searchwrap">
-        <ul id="search" style="display: grid"></ul>
+        <ul id="search"></ul>
       </div>
 
       <!-- 3. 하단영역  -->
-      <div class="info">
-        <footer class="info">
-          <!-- 3-1 회사정보 -->
-          <div class="addr foot">
-            <address>주소 : 서울특별시 용산구 이태원로55가길 40, 2층 (한남동)</address>
-          </div>
-          <!-- 3-2 회사번호 -->
-          <div class="tel foot">고객센터: 1899-6332 운영시간 오전 9시 ~ 오후 6시 (점심시간: 낮 12시 ~ 1시)</div>
-          <!-- 3-3 저작권 -->
-          <div class="right foot">ⓒ ORGANICA CORP. ALL RIGHTS RESERVED</div>
-        </footer>
-      </div>
+      
+
+
+
+
+
     </div>
   </body>
-
+  
 </html>
 

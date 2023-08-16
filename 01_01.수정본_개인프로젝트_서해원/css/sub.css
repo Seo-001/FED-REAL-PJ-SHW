@@ -1,13 +1,10 @@
 .subwrap {
   position: relative;
-  padding-top: 10.7%;
+  padding-top: 90px;
   /* height: 100vh; */
 }
 
-
-.subwrap .gnb a {
-  /* transition:none; */
-} 
+ 
 
 .subwrap .gnb a:hover {
     color: #c42f2fce;  
@@ -15,12 +12,12 @@
 } 
 
 
-#map, #search {
+#map, .searchwrap {
   width: 100%;
   height: calc(100vh - 157px);
 }
 
-.mapwrap, .searchwrap{
+.mapwrap, {
   position: relative;
   /* margin-top: 204px; */
 }
@@ -73,3 +70,26 @@
 }
 
 
+
+/*검색 */
+
+#search li {
+  width: 200px;
+  height: 200px;
+}
+
+#search li img{
+  width: 100%;
+  height: 100%;
+}
+
+#search li:nth-child(4){
+  display: none;
+}
+
+#search li:nth-child(6){
+  display: none;
+}
+#search li:nth-child(7){
+  display: none;
+}
