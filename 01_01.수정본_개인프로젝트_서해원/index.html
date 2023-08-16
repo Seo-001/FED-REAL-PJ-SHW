@@ -29,6 +29,8 @@
       // SDK 초기화 여부를 판단합니다.
       //console.log(Kakao.isInitialized());
       //Kakao.isInitialized();
+      // uri=http://192.168.45.169:5500/01_01.수정본_개인프로젝트_서해원/login.html'; 집 
+
 
       //   redirectUri: 'https://192.168.45.169:5500/oauth',
       // https://kindloveit.tistory.com/107
@@ -42,13 +44,13 @@
       //var axios = require('axios');
       function loginWithKakao() {
         Kakao.Auth.authorize({
-          redirectUri: 'http://192.168.45.169:5500/01_01.수정본_개인프로젝트_서해원/login.html',
+          redirectUri: 'http://127.0.0.1:5500/01_01.수정본_개인프로젝트_서해원/login.html',
           prompt: 'login',
           scope: 'profile_nickname',
         });
-        kakaoLogin();
-        // location.href =
-        //   'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=	5bc11e136d9aff8a86918035d140a193&redirect_uri=http://192.168.45.169:5500/01_01.수정본_개인프로젝트_서해원/login.html';
+       // kakaoLogin();
+        //  location.href =
+        //    'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=5bc11e136d9aff8a86918035d140a193&redirect_uri=https://127.0.0.1:5500/01_01.수정본_개인프로젝트_서해원/login.html';
       }
 
     

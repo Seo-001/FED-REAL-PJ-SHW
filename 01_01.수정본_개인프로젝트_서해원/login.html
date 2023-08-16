@@ -24,7 +24,7 @@
           requestToken(code)
             .then(({ data }) => {
               console.log('requestToken:', data);
-              //document.write('login success');
+              document.write('login success');
             })
             .catch((err) => {
               console.error('requestToken:', err);
@@ -33,7 +33,7 @@
 
         function requestToken(code) {
           const JS_APP_KEY = '5bc11e136d9aff8a86918035d140a193';
-          const REDIRECT_URI = 'http://192.168.45.169:5500/01_01.수정본_개인프로젝트_서해원/login.html';
+          const REDIRECT_URI = 'http://127.0.0.1:5500/01_01.수정본_개인프로젝트_서해원/login.html';
           const makeFormData = (params) => {
             const searchParams = new URLSearchParams();
             Object.keys(params).forEach((key) => {
@@ -62,7 +62,7 @@
             data: makeFormData({
               grant_type: 'authorization_code',
               client_id: JS_APP_KEY,
-              redirect_uri: REDIRECT_URI,
+              redirect_uri:REDIRECT_URI,
               code,
             }), ///////////
           }); //////axios///////
