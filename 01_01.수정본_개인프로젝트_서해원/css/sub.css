@@ -4,6 +4,17 @@
   /* height: 100vh; */
 }
 
+
+.subwrap .gnb a {
+  /* transition:none; */
+} 
+
+.subwrap .gnb a:hover {
+    color: #c42f2fce;  
+  /* transition:none; */
+} 
+
+
 #map, #search {
   width: 100%;
   height: calc(100vh - 157px);

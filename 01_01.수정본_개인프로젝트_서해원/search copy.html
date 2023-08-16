@@ -19,7 +19,7 @@
     integrity="sha38470k0rrouSYPWJt7q9rSTKpiTfX6USlMYjZUtr1Du+9o4cGvhPAWxngdtVZDdErlh"
     crossorigin="anonymous"
   ></script> -->
-  <!-- <script src="./JS/main.js"></script> -->
+  <script src="./JS/main.js" defer></script>
 
     <title>검색</title>
 
@@ -28,10 +28,10 @@
         https://rhkdgus0779.tistory.com/70
 -->
     <script>
-      window.addEventListener('load', loadFn);
+      //window.addEventListener('DOMContentLoaded', loadFn);
 
-     // imgFn()
-      function loadFn() {
+      imgFn()
+      function imgFn() {
         startSS();
 
 
@@ -49,8 +49,8 @@
             },////data//////
             success:function(data){
                 console.log(data);
-                 $.each(data.documents, function (index) {
-                    $("ul#search").append('<div><img src="'+this.image_url+'"/></div>');
+                $.each(data.documents, function (index) {
+                    $("div#search").append('<div><img src="'+this.image_url+'"/></div>');
 
                 })////////////////
             },//success/////
@@ -139,7 +139,7 @@
       </div>
 
       <div class="searchwrap">
-        <ul id="search" style="display: grid"></ul>
+        <div id="search" style="display: grid"></div>
       </div>
 
       <!-- 3. 하단영역  -->

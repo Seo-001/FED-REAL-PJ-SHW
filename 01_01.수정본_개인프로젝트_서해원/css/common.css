@@ -136,7 +136,7 @@ h1.logo > a > img {
     display: inline-block;
     white-space: nowrap;
     padding: 3vh 1vw;
-    transition: color 0.42s ease-in;
+    transition: color 0.2s linear;
 }
 
 /* 마우스 오버시 글자색 변경 */
