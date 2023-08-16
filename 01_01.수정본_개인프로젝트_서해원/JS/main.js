@@ -130,6 +130,7 @@ function loadFn() {
     // 1-4.  슬라이드 li리스트
     let slist = document.querySelectorAll("#slide>li");
 
+  
     // [드래그 대상 (#slide) 드래그 적용 함수 호출하기!]
     goDrag(slide);
 
@@ -217,6 +218,8 @@ insertBefore()는 appendChild()와 비슷하지만, 전달인자가 두 개라�
     // 매개변수 seq 는 함수내의 지역변수이다.
     // const goSlide 는 loadFn의 지역이기 때문에 전역화를 해주어야 한다.  그래서 const 삭제
     goSlide = (seq) => {
+          
+
         //  console.log("슬고우!", seq);
 
         //  console.log("못들어갔어!!!!");
@@ -342,6 +345,7 @@ insertBefore()는 appendChild()와 비슷하지만, 전달인자가 두 개라�
             기능: 인터발함수로 슬라이드함수 호출
         ************************************/
     function autoSlide() {
+       
         //console.log('인터발시작!');
         // 인터발함수로 슬라이드함수 호출하기
         autoI = setInterval(() => goSlide(1), 3000);
@@ -379,6 +383,7 @@ insertBefore()는 appendChild()와 비슷하지만, 전달인자가 두 개라�
      *************************************************************************************/
 
     function goDrag(obj) {
+
         // obj - 드래그 대상(슬라이드 요소)
         // 변수만들기/////////////////////
         //(1) 드래그 상태변수 // true-드래그중,  false-드래그아님

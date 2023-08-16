@@ -4,12 +4,12 @@
   /* height: 100vh; */
 }
 
-#map {
+#map, #search {
   width: 100%;
   height: calc(100vh - 157px);
 }
 
-.mapwrap {
+.mapwrap, .searchwrap{
   position: relative;
   /* margin-top: 204px; */
 }
@@ -60,3 +60,5 @@
   height: 12px;
   background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png');
 }
+
+
