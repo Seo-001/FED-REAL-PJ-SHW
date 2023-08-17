@@ -1,24 +1,61 @@
 .subwrap {
   position: relative;
-  padding-top: 90px;
+  padding-top: 178px;
+  margin: 0 auto;
   /* height: 100vh; */
 }
 
- 
-
-.subwrap .gnb a:hover {
-    color: #c42f2fce;  
-  /* transition:none; */
-} 
-
-
-#map, .searchwrap {
-  width: 100%;
-  height: calc(100vh - 157px);
+.searchbx{
+  padding-top: 178px;
+  margin: 0 auto;
+  max-width:1500px
 }
+
+/* .subwrap .gnb a:hover, .searchbx .gnb a:hover  {
+    color: #c42f2fce;  
+  /* transition:none; 
+}  */
+
+
+#map {
+  width: 100%;
+  /* heigh7: calc(100vh - 157px); */
+  height: 100%;
+
+
+}
+
+.searchwrap{
+  margin: 30px auto;
+  width: 100%;
+  /* height: calc(100vh - 157px); */
+}
+
+.loginwrap{
+  padding-top: 40px;
+  height: 637px;
+  text-align: center;
+}
+
+
+.loginwrap h1{
+  font-size:40px;
+  transition: 0.6s ease-out ;
+}
+
+
+
+.loginwrap h1:hover{
+
+  transform: scale(1.4);
+}
+
+
+
 
 .mapwrap {
   position: relative;
+  height:680px;
   /* margin-top: 204px; */
 }
 
@@ -73,17 +110,34 @@
 
 /*검색 */
 
+#search{
+display:grid;
+grid-template-columns:repeat(3,400px);
+gap: 10px;
+justify-content: center;
+}
+
 #search li {
-  width: 200px;
+ margin: 0 auto;
   height: 200px;
+  aspect-ratio: 16/9;
+  /* 가로: 200= 16:9
+  200*16/9
+  */
 }
 
 #search li img{
+  object-fit: fill;
   width: 100%;
   height: 100%;
 }
 
-#search li:nth-child(4){
+/* #search li:nth-child(3){
+  display: none;
+} */
+
+
+#search li:nth-child(2),#search li:nth-child(3), #search li:nth-child(4),#search li:nth-child(5), #search li:nth-child(10), #search li:nth-child(12), #search li:nth-child(15), #search li:nth-child(18){
   display: none;
 }
 
