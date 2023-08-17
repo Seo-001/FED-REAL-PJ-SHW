@@ -11,12 +11,6 @@
   max-width:1500px
 }
 
-/* .subwrap .gnb a:hover, .searchbx .gnb a:hover  {
-    color: #c42f2fce;  
-  /* transition:none; 
-}  */
-
-
 #map {
   width: 100%;
   /* heigh7: calc(100vh - 157px); */
@@ -132,9 +126,7 @@ justify-content: center;
   height: 100%;
 }
 
-/* #search li:nth-child(3){
-  display: none;
-} */
+
 
 
 #search li:nth-child(2),#search li:nth-child(3), #search li:nth-child(4),#search li:nth-child(5), #search li:nth-child(10), #search li:nth-child(12), #search li:nth-child(15), #search li:nth-child(18){
