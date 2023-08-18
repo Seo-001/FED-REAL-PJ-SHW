@@ -34,49 +34,9 @@
   
 
 <script>
-         
-    //   window.addEventListener('load', loadFn);
-
-
-    // 메뉴 클릭시 이동하기
-    // 대상: .mvbx a
-    // const mvgnb = document.querySelectorAll(".gnb a");
-    // // console.log(mvgnb);
-
-    // mvgnb.forEach((ele) => ele.addEventListener("click", mvPos));
-
-    // function mvPos(e) {
-    //     // 기본이동막기
-    //     e.preventDefault();
-    //     // a의 href속성 읽기
-    //     let ahref = this.getAttribute("href");
-    //     console.log(ahref);
-
-    //     // 위치값 셋팅
-    //     let pos = document.querySelector(ahref).offsetTop;
-    //     console.log(pos);
-
-    //     // 제이쿼리로 위치이동하기
-    //     $("html,body")
-    //         .stop()
-    //         .animate(
-    //             {
-    //                 scrollTop: pos + "px",
-    //             },
-    //             800,
-    //             "easeInOutQuint"
-    //         );
-
-    //     // 위치이동 : 부드러운 스크롤이므로 위치변수만 업데이트
-    //     ss_pos = pos;
-
-    //     console.log("부스", ss_pos);
-    // } ////////// mvPos ///////////////////
-
       imgFn()
       function imgFn() {
         startSS();
-
 
         $.ajax({
             method:"GET",
@@ -101,12 +61,7 @@
                 console.log("search_api_error",xhr.responseText);
                 return
             }/////////
-
-
         })//ajax//////////
-       
-
-
       } ////바깥 함수 
     </script>
 
