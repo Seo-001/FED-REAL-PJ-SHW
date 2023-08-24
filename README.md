@@ -5,7 +5,7 @@
 <br/>
 
 ## 1. 1차 프로젝트
-<img src="./img/1차프로젝트.png"  width="200" height="200">
+<img src="./img/1차프로젝트.png"  width="400" height="200">
 
 ### 링크 
 #### 완성품: Click [here](https://seo-001.github.io/FED-REAL-PJ-SHW/01.%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%84%9C%ED%95%B4%EC%9B%90/)  
@@ -22,7 +22,7 @@
 <br/>
 
 ## 2. 2차 프로젝트 
-<img src="./img/2차프로젝트.png"  width="200" height="200">
+<img src="./img/2차프로젝트.png"  width="400" height="200">
 
 ### 링크 : 
 #### 완성품: Click [here](https://seo-001.github.io/FED-REAL-PJ-SHW/02.2%EC%B0%A8%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/index.html)  
@@ -39,7 +39,7 @@
 <br/>
 
 ## 3. 3차 프로젝트 
-<img src="./img/3차프로젝트.png"  width="200" height="200">
+<img src="./img/3차프로젝트.png"  width="400" height="200">
 
 ### 링크 : 
 #### 완성품: Click [here](https://seo-001.github.io/react03/)  
