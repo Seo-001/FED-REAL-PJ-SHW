@@ -1,10 +1,12 @@
 # FED-REAL-PJ-SHW
 
-## 최종 프로젝트 README
+#### 디렉토리:Click [here](https://github.com/Seo-001/FED-REAL-PJ-SHW.git)
 
-https://seo-001.github.io/FED-REAL-PJ-SHW/
+#### README:Click [here](https://seo-001.github.io/FED-REAL-PJ-SHW/)
 
 <br/>
+
+---
 
 ## 1. 1차 프로젝트
 
