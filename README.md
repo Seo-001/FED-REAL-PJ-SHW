@@ -1,6 +1,6 @@
 # FED-REAL-PJ-SHW
 
-#### 3개의 프로젝트 PPT :Click [here](https://seo-001.github.io/FED-REAL-PJ-SHW/3%EA%B0%9C%EC%9D%98%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20ppt%20%EC%A0%95%EB%A6%AC_%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C_%EC%84%9C%ED%95%B4%EC%9B%90.pdf)
+#### 3개의 프로젝트 PPT :Click [here](https://seo-001.github.io/FED-REAL-PJ-SHW/total_project_ppt.pdf)
 
 #### 디렉토리:Click [here](https://github.com/Seo-001/FED-REAL-PJ-SHW.git)
 
