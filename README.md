@@ -1,5 +1,7 @@
 # FED-REAL-PJ-SHW
 
+## 1차, 2차, 3차 프로젝트 : 기여도 100%
+
 #### 3개의 프로젝트 PPT :Click [here](https://seo-001.github.io/FED-REAL-PJ-SHW/total_project_ppt.pdf)
 
 #### 디렉토리:Click [here](https://github.com/Seo-001/FED-REAL-PJ-SHW.git)
